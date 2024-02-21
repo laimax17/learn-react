@@ -8,6 +8,9 @@ import Counter from './components/snapshot'
 import Cart from './qcomps/shoppingCart'
 import Update from './qcomps/updObjectsForm'
 import Obj from './components/updObjects'
+import Artists from './components/artistsArr'
+import ArtistList from './qcomps/artistsRemoveArr'
+import ArrObj from './qcomps/arrObj'
 export default function Home() {
   return (
     <div className={styles.main}>
@@ -15,8 +18,11 @@ export default function Home() {
         {/* <StuckFrom /> */}
         {/* <Counter /> */}
         {/* <Cart /> */}
-        <Update />
+        {/* <Update /> */}
         {/* <Obj /> */}
+        {/* <Artists /> */}
+        {/* <ArtistList /> */}
+        <ArrObj />
     </div>
   )
 }
