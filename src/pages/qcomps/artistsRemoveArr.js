@@ -9,13 +9,6 @@ let initialArtists = [
 export default function List() {
   const [artists, setArtists] = useState(initialArtists);
 
-  const handleDelete = (id) => {
-    // Use filter to create a new array without the artist to be deleted
-    const updatedArtists = artists.filter((artist) => artist.id !== id);
-    // Update the state with the new array
-    setArtists(updatedArtists);
-  };
-
   return (
     <>
       <h1>Inspiring sculptors:</h1>
@@ -23,7 +16,9 @@ export default function List() {
         {artists.map((artist) => (
           <li key={artist.id}>
             {artist.name}{' '}
-            <button onClick={() => handleDelete(artist.id)}>
+            <button onClick={() => {
+              setArtists(artists.filter((a) => {return a.id !== artist.id}))
+            }}>
               Delete
             </button>
           </li>
